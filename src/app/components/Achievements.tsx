@@ -1,11 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, GraduationCap, Code } from "lucide-react"
+import { GraduationCap, Code } from "lucide-react"
+import Image from "next/image"
 
 const achievements = [
   {
-    icon: <Award className="w-8 h-8" />,
+    icon: <Image src="/GSoC-icon.svg" alt="GSoC" width={32} height={32} />,
     title: "GSoC 2024",
     description: "Selected for Google Summer of Code 2024",
   },
@@ -72,20 +73,6 @@ export default function Achievements() {
           ))}
         </div>
 
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <a
-            href="/journey"
-            className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-          >
-            Explore Full Journey
-          </a>
-        </motion.div> */}
       </div>
     </section>
   )
