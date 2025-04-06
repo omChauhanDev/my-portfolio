@@ -12,7 +12,7 @@ const navItems = [
   // { name: "Projects", href: "/projects" },
   // { name: "Experience", href: "/experience" },
   // { name: "Skills", href: "/skills" },
-  // { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/contact" },
 ]
 
 export default function Navbar() {
@@ -51,7 +51,6 @@ export default function Navbar() {
             "transition-all duration-300",
           )}
         >
-          {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6">
             {navItems.map((item) => (
               <Link
@@ -71,7 +70,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
             className="md:hidden rounded-full p-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -80,7 +78,6 @@ export default function Navbar() {
             {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
 
-          {/* Theme Toggle */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -96,7 +93,6 @@ export default function Navbar() {
             {mounted && theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </motion.button>
 
-          {/* Mobile Menu */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -20 }}
