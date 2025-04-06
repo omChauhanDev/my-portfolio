@@ -9,10 +9,10 @@ import { cn } from "@/app/lib/utils"
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
-  { name: "Experience", href: "/experience" },
-  { name: "Skills", href: "/skills" },
-  { name: "Contact", href: "/contact" },
+  // { name: "Projects", href: "/projects" },
+  // { name: "Experience", href: "/experience" },
+  // { name: "Skills", href: "/skills" },
+  // { name: "Contact", href: "/contact" },
 ]
 
 export default function Navbar() {
@@ -104,21 +104,26 @@ export default function Navbar() {
             className={cn(
               "absolute top-full right-0 left-0 mt-2",
               "rounded-2xl border border-border/40",
-              "bg-background/80 backdrop-blur-lg",
-              "p-4 md:hidden",
-              "shadow-lg",
+              "bg-background/95 dark:bg-background/95",
+              "backdrop-blur-xl",
+              "p-6",
+              "md:hidden",
+              "shadow-[0_0_1rem_rgba(0,0,0,0.1)] dark:shadow-[0_0_1rem_rgba(255,255,255,0.1)]",
               isOpen ? "block" : "hidden",
             )}
           >
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-6">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group"
                   onClick={() => setIsOpen(false)}
                 >
-                  {item.name}
+                  <span className="relative">
+                    {item.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full" />
+                  </span>
                 </Link>
               ))}
             </div>
