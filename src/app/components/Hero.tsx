@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Github, Linkedin, MapPin, Hand, Mail } from "lucide-react"
+import { Github, Linkedin, MapPin, Hand, Mail, Sparkles } from "lucide-react"
 
 const socialLinks = [
   {
@@ -67,9 +67,10 @@ export default function Hero() {
               Full Stack Developer & Open Source Contributor
             </p>
 
-            <p className="text-base sm:text-lg text-muted-foreground/80 max-w-xl">
-              Building seamless digital experiences with clean & efficient code.
-            </p>
+            <div className="flex items-center gap-2 text-xl sm:text-2xl text-muted-foreground">
+              <Sparkles className="w-6 h-6 text-blue-400" />
+              <span>Building the future with AI</span>
+            </div>
 
             <div className="flex flex-wrap gap-4">
               {socialLinks.map((link, index) => (
