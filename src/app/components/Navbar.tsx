@@ -90,7 +90,7 @@ export default function Navbar() {
             )}
             aria-label="Toggle theme"
           >
-            {mounted && theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          {mounted ? (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />) : null}
           </motion.button>
 
           <motion.div
