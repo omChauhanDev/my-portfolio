@@ -64,7 +64,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-xl sm:text-2xl md:text-3xl text-primary font-medium">
-              Full Stack Developer & Open Source Contributor
+              Agentic AI x Full Stack Developer
             </p>
 
             <div className="flex items-center gap-2 text-xl sm:text-2xl text-muted-foreground">

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { GraduationCap, Code } from "lucide-react"
+import { GraduationCap } from "lucide-react"
 import Image from "next/image"
 
 const achievements = [
@@ -15,11 +15,11 @@ const achievements = [
     title: "Academic Excellence",
     description: "Current CGPA: 9.8",
   },
-  {
-    icon: <Code className="w-10 h-10" />,
-    title: "Problem Solving",
-    description: " Solved 300+ DSA Problems",
-  },
+  // {
+  //   icon: <Code className="w-10 h-10" />,
+  //   title: "Problem Solving",
+  //   description: " Solved 400+ DSA Problems",
+  // },
 ]
 
 export default function Achievements() {
